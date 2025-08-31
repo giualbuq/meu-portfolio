@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  background-color: #8370b1;
+  justify-content: center;
+  gap: 3rem;
+  padding-bottom: 5rem;
+}
+
+.container .titulo, 
+.container h3 {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: #eee7e7;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  color: transparent;
+}
+
+.card {
+  display: flex;
+  background-color: #8370b1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px; 
+  border-radius: 16px;
+}
+
+.card .descricao {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  color: #eee7e7;
+  margin-bottom: 2rem;
+}
+
+.card p {
+  font-weight: 600;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #eee7e7;
+}
+
+.inputMenor,
+.inputMaior {
+  width: 100%;
+  max-width: 520px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inputMenor:focus,
+.inputMaior:focus {
+  border-color: #7f6899;
+  box-shadow: 0 0 6px rgba(242, 131, 175, 0.5);
+}
+
+.inputMaior {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.7rem 1.8rem;
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4c3f69;
+  color: #eee7e7;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #4c3f69;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(110, 40, 119, 0.4);
+}
+
+@media (max-width: 768px) {
+  .container .titulo, 
+  .container h3 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 0 1rem;
+  }
+
+  .inputMenor,
+  .inputMaior {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .titulo, 
+  .container h3 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+.alerta {
+  position: fixed;
+  top: 14px;
+  right: 20px;
+  background-color: #564975; 
+  color: #fff; 
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 9999;
+  font-weight: bold;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
