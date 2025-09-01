@@ -1,69 +1,54 @@
-# React + TypeScript + Vite
+🌌 Meu Portfólio - Giulia Silva
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do meu portfólio pessoal, desenvolvido com React + TypeScript.
+O projeto foi construído para apresentar minhas habilidades, projetos e facilitar o contato de forma moderna, responsiva e elegante.
 
-Currently, two official plugins are available:
+✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌍 Suporte a múltiplos idiomas (🇧🇷 Português e 🇺🇸 Inglês)
 
-## Expanding the ESLint configuration
+📱 Design responsivo, adaptado para diferentes dispositivos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎨 Interface moderna com fundo animado de estrelas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🧭 Navegação fixa no topo da página
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+📂 Sessões bem definidas:
+      - Início
+      - Sobre mim
+      - Habilidades
+      - Projetos
+      - Contato
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠️ Tecnologias utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+      - React + TypeScript
+      - Vite (para build e ambiente de desenvolvimento rápido)
+      - CSS Modules (estilização isolada e organizada)
+      - Framer Motion (animações suaves)
+      - HTML5 e CSS3
+      - Git/GitHub (controle de versão e hospedagem do código)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+📁 Estrutura de pastas
+📦 meu-portfolio
+ ┣ 📂 public        # Arquivos públicos (favicon, ícones)
+ ┣ 📂 src
+ ┃ ┣ 📂 assets      # Imagens, ícones e bandeiras
+ ┃ ┣ 📂 components  # Componentes reutilizáveis (Header, Footer, etc.)
+ ┃ ┣ 📂 styles      # Estilos globais e módulos CSS
+ ┃ ┣ main.tsx       # Ponto de entrada
+ ┃ ┗ App.tsx        # Estrutura principal da aplicação
+ ┣ index.html
+ ┣ tsconfig.json
+ ┣ package.json
+ ┗ README.md
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📬 Contato
+
+Se quiser trocar uma ideia, colaborar ou dar feedback:
+
+💼 LinkedIn
+
+📧 Email: giulia.albsilva@gmail.com
+
+💖 Feito com dedicação por Giulia Silva 🚀
