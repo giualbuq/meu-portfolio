@@ -1,11 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap');
 
 :root {
-  --purple: #a64ca6;      
-  --purple-dark: #6b2e6b;  
-     
+  /* Cores */
+  --bg:        #05030f;
+  --bg2:       #0d0a1e;
+  --bg3:       #15112a;
+  --accent1:   #a855f7;   /* roxo */
+  --accent2:   #ec4899;   /* rosa */
+  --accent3:   #3b82f6;   /* azul */
+  --text:      #f1eeff;
+  --text-muted:#9d94bb;
+  --border:    rgba(168,85,247,0.18);
+  --glow:      rgba(168,85,247,0.35);
 
-  --font-family: 'Poppins', 'Quicksand', sans-serif;
+  /* Fontes */
+  --font-heading: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Tamanhos */
   --font-size-base: 16px;
-  --font-size-heading: 2rem;
 }

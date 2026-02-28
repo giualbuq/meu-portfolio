@@ -1,63 +1,82 @@
 .footer {
-  background-color: #4c3f69;
-  color: #e7dedd;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
   text-align: center;
-  padding: 2rem 1rem 3rem 1rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  position: relative;
 }
 
-.footer .logo {
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent1), var(--accent2), transparent);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
-  color: #e7dedd;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
 }
 
-.footer .socials {
+.socials {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
-.footer .socials img {
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
 }
 
-.footer .socials img:hover {
-  transform: scale(1.3);
-  filter: brightness(1.2);
+.socials a:hover {
+  border-color: var(--accent1);
+  background: rgba(168,85,247,0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 0 16px var(--glow);
+}
+
+.socials img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.socials a:hover img {
+  opacity: 1;
 }
 
 .footer p {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
   margin: 0;
-  color: #e7dedd;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  .footer .logo {
-    font-size: 1.3rem;
-  }
-
-  .footer p {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
   .footer {
-    padding: 1.5rem 1rem 2rem 1rem;
-  }
-
-  .footer .socials img {
-    width: 30px;
-    height: 30px;
+    padding: 2rem 1.5rem;
   }
 }

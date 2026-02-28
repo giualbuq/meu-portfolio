@@ -2,41 +2,46 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 4rem;
-  background-color: #F9EBE8;
-  position: sticky;
+  padding: 1rem 3.5rem;
+  background-color: var(--bg);
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  border-bottom: 1px solid transparent;
+  flex-wrap: wrap;
 }
 
 .header.scrolled {
-  background-color: rgba(249, 235, 232, 0.7); /* transparente */
-  backdrop-filter: blur(10px); /* desfoque suave */
+  background-color: rgba(5, 3, 15, 0.75);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
 }
 
 .titulo {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
   cursor: pointer;
-  color: #564975;
-}
-
-.sobrenome{
-  color: #ce94b5;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
 }
 
 .navLinks {
   display: flex;
-  gap: 3rem;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+  gap: 2.5rem;
+  font-size: 0.87rem;
 }
 
 .navLinks a {
   text-decoration: none;
-  font-weight: 600;
-  color: #564975;
+  font-weight: 500;
+  color: var(--text-muted);
   position: relative;
   transition: color 0.3s ease;
 }
@@ -46,75 +51,124 @@
   display: block;
   height: 2px;
   width: 0;
-  background: #564975;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   transition: width 0.3s;
   position: absolute;
   bottom: -5px;
   left: 0;
+  border-radius: 99px;
 }
 
-.navLinks a:hover {
-  color: #564975;
-}
+.navLinks a:hover { color: var(--accent1); }
+.navLinks a:hover::after { width: 100%; }
 
-.navLinks a:hover::after {
-  width: 100%;
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .flags {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.75rem;
+  align-items: center;
 }
 
 .flags img {
   border-radius: 50%;
   object-fit: cover;
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .flags img:hover {
   transform: scale(1.2);
+  opacity: 1 !important;
 }
 
-@media (max-width: 1024px) {
+/* Hamburguer — escondido no desktop */
+.hamburger {
+  display: none;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hamburger:hover {
+  border-color: var(--accent1);
+  color: var(--accent1);
+}
+
+/* Menu mobile — escondido no desktop */
+.mobileMenu {
+  display: none;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  /* esconde links do desktop */
+  .navLinks {
+    display: none;
+  }
+
+  /* mostra hamburguer */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* menu mobile dropdown */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+  }
+
+  .mobileMenu a {
+    padding: 1rem 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+
+  .mobileMenu a:last-child {
+    border-bottom: none;
+  }
+
+  .mobileMenu a:hover {
+    color: var(--accent1);
+    background: rgba(168,85,247,0.06);
+    padding-left: 2rem;
+  }
+}
+
+/* ── TABLET ── */
+@media (max-width: 1024px) and (min-width: 769px) {
   .header {
     padding: 1rem 2rem;
   }
 
   .navLinks {
-    gap: 2rem;
-    font-size: 0.85rem;
-  }
-
-  .flags img {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .navLinks {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-    width: 100%;
-  }
-
-  .navLinks a {
-    font-size: 1rem;
-  }
-
-  .flags {
-    margin-top: 1rem;
-    justify-content: flex-start;
+    gap: 1.5rem;
+    font-size: 0.83rem;
   }
 }

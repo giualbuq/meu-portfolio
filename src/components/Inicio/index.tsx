@@ -11,9 +11,11 @@ export function Inicio({ language }: InicioProps) {
       <div className={styles["container-inner"]}>
         <div className={styles.content}>
           <p className={styles.title}>
-            {language === "pt" ? "Olá, sou a" : "Hi, I'm"} <br />
-            Giulia <span className={styles.name}>Albuquerque</span>
-          </p>
+  {language === "pt" ? "Olá, sou a" : "Hi, I'm"}
+</p>
+<p className={styles.name}>
+  Giulia <br></br><span>Silva</span>
+</p>
 
           <p className={styles.subtitle}>
             {language === "pt"
@@ -31,7 +33,7 @@ export function Inicio({ language }: InicioProps) {
             <button
               className={styles.buttonCV}
               onClick={() =>
-                window.open("../../../public/Currículo.pdf", "_blank")
+                window.open("/Curriculo-Giulia-Silva.pdf", "_blank")
               }
             >
               {language === "pt" ? "Baixar CV" : "Download CV"}

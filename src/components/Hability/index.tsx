@@ -4,7 +4,7 @@ import clanguage from "../../assets/skills/c.png";
 import css from "../../assets/skills/css.png";
 import figma from "../../assets/skills/figma.png";
 import git from "../../assets/skills/git.png";
-import github from "../../assets/skills/github.png";
+import github from "../../assets/socialmedia/github.png";
 import sharepoint from "../../assets/skills/hsarepoint.png";
 import html from "../../assets/skills/html.webp";
 import java from "../../assets/skills/java.webp";

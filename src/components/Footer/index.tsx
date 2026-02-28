@@ -1,8 +1,8 @@
 import styles from './styles.module.css';
 
 import github from '../../assets/socialmedia/github.png';
-import instragram from '../../assets/socialmedia/instagram_icon.png';
-import linkedin from '../../assets/socialmedia/LinkedIn_icon.svg.png';
+import instragram from '../../assets/socialmedia/instagram.webp';
+import linkedin from '../../assets/socialmedia/linkedin.webp';
 
 interface FooterProps {
   language: "pt" | "en";
@@ -11,7 +11,7 @@ interface FooterProps {
 export function Footer({ language }: FooterProps) {
   return (
     <footer className={styles.footer}>
-      <h2 className={styles.logo}>GiuliaAlbuquerque</h2>
+      <h2 className={styles.logo}>GiuliaSilva</h2>
 
       <div className={styles.socials}>
         <a href={"https://github.com/giualbuq"} target="_blank" rel="noopener noreferrer">
@@ -27,8 +27,8 @@ export function Footer({ language }: FooterProps) {
 
       <p>
         {language === "pt"
-          ? "© 2025 Giulia Albuquerque. Todos os direitos reservados."
-          : "© 2025 Giulia Albuquerque. All rights reserved."}
+          ? "© 2026 Giulia Silva. Todos os direitos reservados."
+          : "© 2026 Giulia Silva. All rights reserved."}
       </p>
     </footer>
   );
