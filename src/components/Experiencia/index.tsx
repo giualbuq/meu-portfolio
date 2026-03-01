@@ -21,9 +21,9 @@ export function Experiencia({ language }: ExperienciaProps) {
             </div>
             <div className={styles.body}>
               <span className={styles.role}>
-                {language === "pt" ? "Estagiária de Desenvolvimento" : "Development Intern"}
+                {language === "pt" ? "Estagiária de Desenvolvimento de Sistemas" : "Systems Development Intern"}
               </span>
-              <span className={styles.company}>K2M Soluções</span>
+              <span className={styles.company}>K2M Soluções - Remoto</span>
               <span className={styles.period}>
                 {language === "pt" ? "JAN/2025 — Atual" : "JAN/2025 — Present"}
               </span>
