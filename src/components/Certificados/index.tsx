@@ -55,7 +55,7 @@ const certificados: Certificado[] = [
       en: "Learning English with a focus on conversation, grammar, and listening comprehension.",
       es: "Aprendizaje de inglés con enfoque en conversación, gramática y comprensión auditiva."
     },
-    link: "https://hermes.dio.me/certificates/INGL-2023.pdf"
+    link: "/Certificado-Ingles.pdf"
   },
   {
     titulo: "GFT Start #6 - Lógica de Programação",
