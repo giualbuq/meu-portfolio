@@ -35,7 +35,7 @@
 }
 
 .titulo::before {
-  content: '05.';
+  content: '06.';
   color: var(--accent1);
 }
 

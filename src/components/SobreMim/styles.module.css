@@ -101,8 +101,8 @@
   color: var(--accent1);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-top: 1.8rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.55rem;
 }
 
 .content > .subtitle:first-child {
@@ -113,6 +113,18 @@
   font-size: 1.05rem;
   line-height: 1.85;
   color: var(--text-muted);
+  margin: 0;
+}
+
+.langRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.langRow .card {
+  flex: 1 1 220px;
+  margin-bottom: 0;
 }
 
 /* CARDS de formação/experiência */
@@ -124,7 +136,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   transition: border-color 0.2s, transform 0.2s;
 }
 

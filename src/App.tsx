@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
 import { Experiencia } from "./components/Experiencia";
+import { Certificados } from "./components/Certificados";
 
 function App() {
   const [language, setLanguage] = useState<"pt" | "en" | "es">("pt");
@@ -30,6 +31,7 @@ function App() {
         <Experiencia language={language} />
         <Hability language={language} />
         <ProjectSection language={language} />
+        <Certificados language={language} />
         <Contato language={language} />
         <Footer language={language} />
         <ToastContainer
