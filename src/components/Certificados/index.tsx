@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 
 interface Certificado {
@@ -81,9 +81,24 @@ const certificados: Certificado[] = [
 
 export function Certificados({ language }: CertificadosProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
 
-  const slides = Array.from({ length: Math.ceil(certificados.length / 2) }, (_, index) =>
-    certificados.slice(index * 2, index * 2 + 2)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+      setCurrentIndex(0);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const slides = Array.from(
+    { length: Math.ceil(certificados.length / (isMobile ? 1 : 2)) },
+    (_, index) =>
+      isMobile
+        ? [certificados[index]]
+        : certificados.slice(index * 2, index * 2 + 2)
   );
 
   const nextSlide = () => {

@@ -122,6 +122,8 @@
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   .header {
+    position: sticky;
+    top: 0;
     padding: 1rem 1.5rem;
   }
 

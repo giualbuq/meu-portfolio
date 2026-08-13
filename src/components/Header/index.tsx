@@ -37,6 +37,7 @@ export function Header({ language, setLanguage }: HeaderProps) {
           <li><a href="#experiencia">{language === "pt" ? "Experiência" : language === "en" ? "Experience" : "Experiencia"}</a></li>
           <li><a href="#habilidades">{language === "pt" ? "Habilidades" : language === "en" ? "Skills" : "Habilidades"}</a></li>
           <li><a href="#projects">{language === "pt" ? "Projetos" : language === "en" ? "Projects" : "Proyectos"}</a></li>
+          <li><a href="#certificates">{language === "pt" ? "Certificados" : language === "en" ? "Certificates" : "Certificados"}</a></li>
           <li><a href="#contact">{language === "pt" ? "Contato" : language === "en" ? "Contact" : "Contacto"}</a></li>
         </ul>
       </nav>
@@ -77,6 +78,7 @@ export function Header({ language, setLanguage }: HeaderProps) {
           <a href="#about" onClick={closeMenu}>{language === "pt" ? "Sobre mim" : language === "en" ? "About" : "Sobre mí"}</a>
           <a href="#habilidades" onClick={closeMenu}>{language === "pt" ? "Habilidades" : language === "en" ? "Skills" : "Habilidades"}</a>
           <a href="#projects" onClick={closeMenu}>{language === "pt" ? "Projetos" : language === "en" ? "Projects" : "Proyectos"}</a>
+          <a href="#certificates" onClick={closeMenu}>{language === "pt" ? "Certificados" : language === "en" ? "Certificates" : "Certificados"}</a>
           <a href="#contact" onClick={closeMenu}>{language === "pt" ? "Contato" : language === "en" ? "Contact" : "Contacto"}</a>
         </div>
       )}

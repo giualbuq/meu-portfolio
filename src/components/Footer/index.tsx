@@ -17,7 +17,7 @@ export function Footer({ language }: FooterProps) {
         <a href={"https://github.com/giualbuq"} target="_blank" rel="noopener noreferrer">
           <img src={github} alt="GitHub" />
         </a>
-        <a href="https://instagram.com/giiuliaff" target="_blank" rel="noopener noreferrer">
+        <a href="https://instagram.com/giualbs" target="_blank" rel="noopener noreferrer">
           <img src={instragram} alt="Instagram" />
         </a>
         <a href="https://www.linkedin.com/in/giuliaf-albuquerque" target="_blank" rel="noopener noreferrer">
