@@ -6,9 +6,10 @@ export type ProjectCardProps = {
   subtitulo: string;
   habilidades: string[];
   linkProjeto: string;
+  language?: "pt" | "en" | "es";
 };
 
-export function ProjectCard({ imagem, titulo, subtitulo, habilidades, linkProjeto}: ProjectCardProps) {
+export function ProjectCard({ imagem, titulo, subtitulo, habilidades, linkProjeto, language = "pt"}: ProjectCardProps) {
   return (
     <div onClick={() => window.open(linkProjeto, "_blank")} className={styles.container}>
       <div className={styles.card}>
@@ -22,7 +23,9 @@ export function ProjectCard({ imagem, titulo, subtitulo, habilidades, linkProjet
             <p key={index}>{hab}</p>
           ))}
         </div>
-        <a className={styles.linkProjeto} href={linkProjeto}> 🔗 Ver Projeto </a>
+        <a className={styles.linkProjeto} href={linkProjeto}>
+          {language === "pt" ? "🔗 Ver Projeto" : language === "en" ? "🔗 View Project" : "🔗 Ver proyecto"}
+        </a>
 
       </div>
     </div>

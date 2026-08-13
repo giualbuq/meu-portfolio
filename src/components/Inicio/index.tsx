@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./styles.module.css";
 
 interface InicioProps {
-  language: "pt" | "en";
+  language: "pt" | "en" | "es";
 }
 
 type Line = {
@@ -21,6 +21,11 @@ const linesEn: Line[] = [
   { prompt: "giulia@dev:~$", command: " git status", output: "Always exploring and learning" },
 ];
 
+const linesEs: Line[] = [
+  { prompt: "giulia@dev:~$", command: " whoami", output: "Desarrolladora en formación | Explorando tecnología" },
+  { prompt: "giulia@dev:~$", command: " git status", output: "Siempre explorando y aprendiendo" },
+];
+
 type RenderedLine =
   | { type: "done"; prompt: string; command: string; output?: string }
   | { type: "cursor"; prompt: string };
@@ -36,7 +41,7 @@ export function Inicio({ language }: InicioProps) {
     setRendered([]);
     setTypingText("");
 
-    const allLines = language === "pt" ? linesPt : linesEn;
+    const allLines = language === "pt" ? linesPt : language === "en" ? linesEn : linesEs;
     let lineIndex = 0;
     let charIndex = 0;
     let phase: "typing" | "output" = "typing";
@@ -92,7 +97,7 @@ export function Inicio({ language }: InicioProps) {
 
         <div className={styles.content}>
           <p className={styles.title}>
-            {language === "pt" ? "Olá, sou a" : "Hi, I'm"}
+            {language === "pt" ? "Olá, sou a" : language === "en" ? "Hi, I'm" : "Hola, soy"}
           </p>
           <p className={styles.name}>
             Giulia <br /><span>Silva</span>
@@ -100,19 +105,23 @@ export function Inicio({ language }: InicioProps) {
           <p className={styles.subtitle}>
             {language === "pt"
               ? "Estudante de Engenharia da Computação."
-              : "Computer Engineering Student."}
+              : language === "en"
+              ? "Computer Engineering Student."
+              : "Estudiante de Ingeniería de Computación."}
           </p>
           <p className={styles.description}>
             {language === "pt"
               ? "Adoro explorar novas tecnologias, enfrentar desafios e contribuir com soluções que façam a diferença."
-              : "I love exploring new technologies, tackling challenges, and contributing with solutions that make a difference."}
+              : language === "en"
+              ? "I love exploring new technologies, tackling challenges, and contributing with solutions that make a difference."
+              : "Me encanta explorar nuevas tecnologías, enfrentar desafíos y contribuir con soluciones que marcan la diferencia."}
           </p>
           <div className={styles.buttonSection}>
             <button
               className={styles.buttonCV}
               onClick={() => window.open("/Curriculo-Giulia-Silva.pdf", "_blank")}
             >
-              {language === "pt" ? "Baixar CV" : "Download CV"}
+              {language === "pt" ? "Baixar CV" : language === "en" ? "Download CV" : "Descargar CV"}
             </button>
           </div>
         </div>

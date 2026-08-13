@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import profilePhoto from "../../assets/profile.jpeg";
 
 interface SobreMimProps {
-  language: "pt" | "en";
+  language: "pt" | "en" | "es";
 }
 
 export function SobreMim({ language }: SobreMimProps) {
@@ -11,7 +11,7 @@ export function SobreMim({ language }: SobreMimProps) {
       <div className={styles.inner}>
         <h2 className={styles.title}>
           <span className={styles.titleNum}>01.</span>
-          {language === "pt" ? "Sobre Mim" : "About Me"}
+          {language === "pt" ? "Sobre Mim" : language === "en" ? "About Me" : "Sobre mí"}
         </h2>
 
         <div className={styles.grid}>
@@ -20,31 +20,35 @@ export function SobreMim({ language }: SobreMimProps) {
             <img
               className={styles.photo}
               src={profilePhoto}
-              alt={language === "pt" ? "Foto de Giulia" : "Photo of Giulia"}
+              alt={language === "pt" ? "Foto de Giulia" : language === "en" ? "Photo of Giulia" : "Foto de Giulia"}
             />
           </div>
 
           <div className={styles.content}>
             <p className={styles.subtitle}>
-              {language === "pt" ? "Quem sou eu?" : "Who am I?"}
+              {language === "pt" ? "Quem sou eu?" : language === "en" ? "Who am I?" : "¿Quién soy?"}
             </p>
             <p className={styles.description}>
   {language === "pt"
     ? "Sou estudante de Engenharia da Computação e estou sempre buscando aprender coisas novas. Gosto de desafios e de me desenvolver constantemente, tanto na parte técnica quanto pessoal."
-    : "I’m a Computer Engineering student who is always looking to learn new things. I enjoy challenges and constantly work on improving myself, both technically and personally."}
+    : language === "en"
+    ? "I’m a Computer Engineering student who is always looking to learn new things. I enjoy challenges and constantly work on improving myself, both technically and personally."
+    : "Soy estudiante de Ingeniería de Computación y siempre busco aprender cosas nuevas. Me gustan los desafíos y trabajar en mi desarrollo tanto técnico como personal."}
 </p>
 
             <p className={styles.subtitle}>
-              {language === "pt" ? "Formação Acadêmica" : "Education"}
+              {language === "pt" ? "Formação Acadêmica" : language === "en" ? "Education" : "Formación Académica"}
             </p>
             <div className={styles.card}>
   <span className={styles.cardTitle}>
     {language === "pt"
       ? "Engenharia da Computação — FACENS"
-      : "Computer Engineering — FACENS"}
+      : language === "en"
+      ? "Computer Engineering — FACENS"
+      : "Ingeniería de Computación — FACENS"}
   </span>
   <span className={styles.cardPeriod}>
-    {language === "pt" ? "Jan/2023 — Dez/2027 (Previsão)" : "Jan/2023 — Dec/2027 (Expected)"}
+    {language === "pt" ? "Jan/2023 — Dez/2027 (Previsão)" : language === "en" ? "Jan/2023 — Dec/2027 (Expected)" : "Ene/2023 — Dic/2027 (Previsto)"}
   </span>
 </div>
 
@@ -52,10 +56,12 @@ export function SobreMim({ language }: SobreMimProps) {
   <span className={styles.cardTitle}>
     {language === "pt"
       ? "Ensino Médio — Colégio Ser"
-      : "High School — Colégio Ser"}
+      : language === "en"
+      ? "High School — Colégio Ser"
+      : "Educación Secundaria — Colégio Ser"}
   </span>
   <span className={styles.cardPeriod}>
-    {language === "pt" ? "Concluído em 2022" : "Completed in 2022"}
+    {language === "pt" ? "Concluído em 2022" : language === "en" ? "Completed in 2022" : "Finalizado en 2022"}
   </span>
 </div>
           </div>

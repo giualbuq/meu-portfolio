@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import brasilflag from "../../assets/flags/brasil.png";
 import euaflag from "../../assets/flags/eua.png";
+import spainflag from "../../assets/flags/spain.webp";
 import { Menu, X } from "lucide-react";
 
 interface HeaderProps {
-  language: "pt" | "en";
-  setLanguage: React.Dispatch<React.SetStateAction<"pt" | "en">>;
+  language: "pt" | "en" | "es";
+  setLanguage: React.Dispatch<React.SetStateAction<"pt" | "en" | "es">>;
 }
 
 export function Header({ language, setLanguage }: HeaderProps) {
@@ -19,7 +20,7 @@ export function Header({ language, setLanguage }: HeaderProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLanguageChange = (lang: "pt" | "en") => setLanguage(lang);
+  const handleLanguageChange = (lang: "pt" | "en" | "es") => setLanguage(lang);
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -31,12 +32,12 @@ export function Header({ language, setLanguage }: HeaderProps) {
       {/* Links desktop */}
       <nav>
         <ul className={styles.navLinks}>
-          <li><a href="#home">{language === "pt" ? "Início" : "Home"}</a></li>
-          <li><a href="#about">{language === "pt" ? "Sobre mim" : "About"}</a></li>
-          <li><a href="#experiencia">{language === "pt" ? "Experiência" : "Expierence"}</a></li>
-          <li><a href="#habilidades">{language === "pt" ? "Habilidades" : "Skills"}</a></li>
-          <li><a href="#projects">{language === "pt" ? "Projetos" : "Projects"}</a></li>
-          <li><a href="#contact">{language === "pt" ? "Contato" : "Contact"}</a></li>
+          <li><a href="#home">{language === "pt" ? "Início" : language === "en" ? "Home" : "Inicio"}</a></li>
+          <li><a href="#about">{language === "pt" ? "Sobre mim" : language === "en" ? "About" : "Sobre mí"}</a></li>
+          <li><a href="#experiencia">{language === "pt" ? "Experiência" : language === "en" ? "Experience" : "Experiencia"}</a></li>
+          <li><a href="#habilidades">{language === "pt" ? "Habilidades" : language === "en" ? "Skills" : "Habilidades"}</a></li>
+          <li><a href="#projects">{language === "pt" ? "Projetos" : language === "en" ? "Projects" : "Proyectos"}</a></li>
+          <li><a href="#contact">{language === "pt" ? "Contato" : language === "en" ? "Contact" : "Contacto"}</a></li>
         </ul>
       </nav>
 
@@ -55,6 +56,12 @@ export function Header({ language, setLanguage }: HeaderProps) {
               style={{ cursor: "pointer", opacity: language === "en" ? 1 : 0.4 }}
             />
           </li>
+          <li>
+            <img src={spainflag} alt="Español" className={styles.spainFlag}
+              onClick={() => handleLanguageChange("es")}
+              style={{ cursor: "pointer", opacity: language === "es" ? 1 : 0.4 }}
+            />
+          </li>
         </ul>
 
         {/* Botão hamburguer */}
@@ -66,11 +73,11 @@ export function Header({ language, setLanguage }: HeaderProps) {
       {/* Menu mobile */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
-          <a href="#home" onClick={closeMenu}>{language === "pt" ? "Início" : "Home"}</a>
-          <a href="#about" onClick={closeMenu}>{language === "pt" ? "Sobre mim" : "About"}</a>
-          <a href="#habilidades" onClick={closeMenu}>{language === "pt" ? "Habilidades" : "Skills"}</a>
-          <a href="#projects" onClick={closeMenu}>{language === "pt" ? "Projetos" : "Projects"}</a>
-          <a href="#contact" onClick={closeMenu}>{language === "pt" ? "Contato" : "Contact"}</a>
+          <a href="#home" onClick={closeMenu}>{language === "pt" ? "Início" : language === "en" ? "Home" : "Inicio"}</a>
+          <a href="#about" onClick={closeMenu}>{language === "pt" ? "Sobre mim" : language === "en" ? "About" : "Sobre mí"}</a>
+          <a href="#habilidades" onClick={closeMenu}>{language === "pt" ? "Habilidades" : language === "en" ? "Skills" : "Habilidades"}</a>
+          <a href="#projects" onClick={closeMenu}>{language === "pt" ? "Projetos" : language === "en" ? "Projects" : "Proyectos"}</a>
+          <a href="#contact" onClick={closeMenu}>{language === "pt" ? "Contato" : language === "en" ? "Contact" : "Contacto"}</a>
         </div>
       )}
     </header>

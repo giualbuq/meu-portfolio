@@ -5,7 +5,7 @@ import instragram from '../../assets/socialmedia/instagram.webp';
 import linkedin from '../../assets/socialmedia/linkedin.webp';
 
 interface FooterProps {
-  language: "pt" | "en";
+  language: "pt" | "en" | "es";
 }
 
 export function Footer({ language }: FooterProps) {
@@ -28,7 +28,9 @@ export function Footer({ language }: FooterProps) {
       <p>
         {language === "pt"
           ? "© 2026 Giulia Silva. Todos os direitos reservados."
-          : "© 2026 Giulia Silva. All rights reserved."}
+          : language === "en"
+          ? "© 2026 Giulia Silva. All rights reserved."
+          : "© 2026 Giulia Silva. Todos los derechos reservados."}
       </p>
     </footer>
   );

@@ -18,20 +18,20 @@ import vscode from "../../assets/skills/vscode.png";
 import wordpress from "../../assets/skills/wordpress.png";
 
 interface HabilityProps {
-  language: "pt" | "en";
+  language: "pt" | "en" | "es";
 }
 
 export function Hability({ language }: HabilityProps) {
   return (
     <div className={styles.section} id="habilidades">
       <h1 className={styles.habilityTitle}>
-        {language === "pt" ? "Habilidades" : "Skills"}
+        {language === "pt" ? "Habilidades" : language === "en" ? "Skills" : "Habilidades"}
       </h1>
 
       <div className={styles.container}>
         <div className={styles.card}>
           <h4>
-            {language === "pt" ? "Linguagens de Programação" : "Programming Languages"}
+            {language === "pt" ? "Linguagens de Programação" : language === "en" ? "Programming Languages" : "Lenguajes de Programación"}
           </h4>
           <div className={styles.habilities}>
             <p><img src={javascript} alt="JavaScript" /> JavaScript</p>
@@ -43,7 +43,7 @@ export function Hability({ language }: HabilityProps) {
 
         <div className={styles.card}>
           <h4>
-            {language === "pt" ? "Desenvolvimento Web" : "Web Development"}
+            {language === "pt" ? "Desenvolvimento Web" : language === "en" ? "Web Development" : "Desarrollo Web"}
           </h4>
           <div className={styles.habilities}>
             <p><img src={react} alt="React" /> React</p>
@@ -55,7 +55,7 @@ export function Hability({ language }: HabilityProps) {
 
         <div className={styles.card}>
           <h4>
-            {language === "pt" ? "Ferramentas" : "Tools"}
+            {language === "pt" ? "Ferramentas" : language === "en" ? "Tools" : "Herramientas"}
           </h4>
           <div className={styles.habilities}>
             <p><img src={git} alt="Git" /> Git</p>
@@ -67,7 +67,7 @@ export function Hability({ language }: HabilityProps) {
 
         <div className={styles.card}>
           <h4>
-            {language === "pt" ? "Outras Tecnologias" : "Other Technologies"}
+            {language === "pt" ? "Outras Tecnologias" : language === "en" ? "Other Technologies" : "Otras Tecnologías"}
           </h4>
           <div className={styles.habilities}>
             <p><img src={powerautomate} alt="Power Automate" /> Power Automate</p>

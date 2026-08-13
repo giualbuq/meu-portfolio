@@ -83,6 +83,15 @@
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+/* Zoom específico para a bandeira espanhola para evitar efeito de 'fundo branco' */
+.spainFlag {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50%;
+}
+
 .flags img:hover {
   transform: scale(1.2);
   opacity: 1 !important;

@@ -11,7 +11,7 @@ import { useState } from "react";
 import { Experiencia } from "./components/Experiencia";
 
 function App() {
-  const [language, setLanguage] = useState<"pt" | "en">("pt");
+  const [language, setLanguage] = useState<"pt" | "en" | "es">("pt");
 
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
