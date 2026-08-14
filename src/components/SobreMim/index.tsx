@@ -44,10 +44,10 @@ export function SobreMim({ language }: SobreMimProps) {
             </p>
             <p className={styles.description}>
               {language === "pt"
-                ? "Sou estudante de Engenharia da Computação e estou sempre buscando aprender coisas novas. Gosto de desafios e de me desenvolver constantemente, tanto na parte técnica quanto pessoal."
+                ? "Sou uma pessoa curiosa, dedicada e que gosta de desafios. Gosto de entender como as coisas funcionam, buscar soluções para os problemas e transformar ideias em algo que realmente funcione."
                 : language === "en"
-                  ? "I’m a Computer Engineering student who is always looking to learn new things. I enjoy challenges and constantly work on improving myself, both technically and personally."
-                  : "Soy estudiante de Ingeniería de Computación y siempre busco aprender cosas nuevas. Me gustan los desafíos y trabajar en mi desarrollo tanto técnico como personal."}
+                  ? "I am a curious, dedicated person who enjoys challenges. I like to understand how things work, seek solutions to problems, and turn ideas into something that really works."
+                  : "Soy una persona curiosa, dedicada y que disfruta de los desafíos. Me gusta entender cómo funcionan las cosas, buscar soluciones a los problemas y convertir ideas en algo que realmente funcione."}
             </p>
 
             <p className={styles.subtitle}>

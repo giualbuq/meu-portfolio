@@ -170,6 +170,25 @@ export function Certificados({ language }: CertificadosProps) {
             </svg>
           </button>
         </div>
+
+        <div className={styles.dots} aria-label="Indicadores do carrossel de certificados">
+          {slides.map((_, slideIndex) => (
+            <button
+              key={slideIndex}
+              type="button"
+              className={`${styles.dot} ${slideIndex === currentIndex ? styles.dotActive : ""}`}
+              onClick={() => setCurrentIndex(slideIndex)}
+              aria-label={
+                language === "pt"
+                  ? `Ir para o slide ${slideIndex + 1}`
+                  : language === "en"
+                  ? `Go to slide ${slideIndex + 1}`
+                  : `Ir al slide ${slideIndex + 1}`
+              }
+              aria-current={slideIndex === currentIndex ? "true" : undefined}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

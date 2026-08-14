@@ -111,10 +111,10 @@ export function Inicio({ language }: InicioProps) {
           </p>
           <p className={styles.description}>
             {language === "pt"
-              ? "Adoro explorar novas tecnologias, enfrentar desafios e contribuir com soluções que façam a diferença."
+              ? "Tenho interesse em desenvolvimento de software e gosto de transformar ideias em projetos, sempre buscando aprender e experimentar novas tecnologias."
               : language === "en"
-              ? "I love exploring new technologies, tackling challenges, and contributing with solutions that make a difference."
-              : "Me encanta explorar nuevas tecnologías, enfrentar desafíos y contribuir con soluciones que marcan la diferencia."}
+              ? "I have an interest in software development and enjoy turning ideas into projects, always seeking to learn and experiment with new technologies."
+              : "Tengo interés en el desarrollo de software y me gusta convertir ideas en proyectos, siempre buscando aprender y experimentar con nuevas tecnologías."}
           </p>
           <div className={styles.buttonSection}>
             <button
