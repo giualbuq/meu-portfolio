@@ -218,14 +218,15 @@
   }
 
   .photoWrap {
-    width: 100%;
+    width: 290px;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
   }
 
   .photo {
-    width: 180px;
-    height: 230px;
+    width: 290px;
+    height: 370px;
   }
 }
 /* Telas grandes */

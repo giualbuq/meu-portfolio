@@ -30,31 +30,31 @@ export function Experiencia({ language }: ExperienciaProps) {
               <ul className={styles.list}>
   <li>
     {language === "pt"
-      ? "Desenvolvimento de soluções com Power Platform para automatizar e melhorar processos internos."
+      ? "Criação e organização de ambientes no SharePoint Online, com foco em usabilidade e estruturação da informação."
       : language === "en"
-      ? "Development of Power Platform solutions to automate and improve internal processes."
-      : "Desarrollo de soluciones con Power Platform para automatizar y optimizar procesos internos."}
+      ? "Creation and organization of SharePoint Online environments, with a focus on usability and information structuring."
+      : "Creación y organización de entornos en SharePoint Online, con enfoque en la usabilidad y la estructuración de la información."}
   </li>
   <li>
     {language === "pt"
-      ? "Criação e organização de ambientes no SharePoint Online, com foco em usabilidade e estruturação da informação."
+      ? "Desenvolvimento de agentes e soluções baseadas em Inteligência Artificial utilizando Microsoft Copilot Studio."
       : language === "en"
-      ? "Creation and organization of SharePoint Online environments, focusing on usability and information structure."
-      : "Creación y organización de entornos en SharePoint Online, con enfoque en usabilidad y estructura de la información."}
+      ? "Development of agents and AI-based solutions using Microsoft Copilot Studio."
+      : "Desarrollo de agentes y soluciones basadas en Inteligencia Artificial utilizando Microsoft Copilot Studio."}
   </li>
   <li>
     {language === "pt"
       ? "Participação em projetos ágeis (Scrum), contribuindo na definição de backlog, pontuação de tarefas, dailys e reviews."
       : language === "en"
       ? "Participation in agile (Scrum) projects, contributing to backlog definition, task estimation, dailys, and reviews."
-      : "Participación en proyectos ágiles (Scrum), contribuyendo en la definición del backlog, estimación de tareas, reuniones diarias y revisiones."}
+      : "Participación en proyectos ágiles (Scrum), contribuyendo en la definición del backlog, la puntuación de tareas, dailys y reviews."}
   </li>
   <li>
     {language === "pt"
-      ? "Análise de demandas e busca por melhorias nas soluções desenvolvidas."
+      ? "Análise de demandas e identificação de oportunidades de melhoria nas soluções desenvolvidas."
       : language === "en"
-      ? "Analysis of requirements and continuous improvement of developed solutions."
-      : "Análisis de requerimientos y búsqueda de mejoras en las soluciones desarrolladas."}
+      ? "Analysis of demands and identification of improvement opportunities in the solutions developed."
+      : "Análisis de demandas e identificación de oportunidades de mejora en las soluciones desarrolladas."}
   </li>
 </ul>
             </div>
